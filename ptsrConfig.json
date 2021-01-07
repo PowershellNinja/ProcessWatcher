@@ -1,0 +1,11 @@
+[
+    {
+        "FileName":  "BotMain.json",
+        "ExeToRun":  "powershell.exe",
+        "ProcessName":  "powershell",
+        "ArgumentList":  "node C:\\Scripts\\AzureTranslateDiscord\\BotMain.js",
+        "WorkingDirectory": "C:\\Scripts\\AzureTranslateDiscord",
+        "WriteLog": true,
+        "LogPath": "C:\\Scripts\\BotLogs"
+    }
+]
