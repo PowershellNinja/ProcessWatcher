@@ -32,7 +32,7 @@ function  Start-ProcessToRun {
         $writeLogFile = "$ptsrLogPath\Log_$($ptsrFileName)_$(Get-Date -Format 'dd.MM.yyy_HH.mm.ss').txt"
         $ptsrArgumentList += " >> $writeLogFile"
     }
-    
+
     $processFile = $null
     $processFile = $runningProcessFiles | Where-Object { $_.Name -eq $ptsrFileName }
     

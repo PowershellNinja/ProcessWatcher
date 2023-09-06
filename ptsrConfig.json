@@ -16,5 +16,14 @@
         "WorkingDirectory": "C:\\Scripts\\FleetAdmiralDiscord",
         "WriteLog": true,
         "LogPath": "C:\\Scripts\\BotLogs"
+    },
+    {
+        "FileName":  "BotMainSTFC-GroupUp.json",
+        "ExeToRun":  "powershell.exe",
+        "ProcessName":  "powershell",
+        "ArgumentList":  "deno run --allow-all .\\mod.ts",
+        "WorkingDirectory": "C:\\Scripts\\STFC-GroupUp",
+        "WriteLog": false,
+        "LogPath": ""
     }
 ]
