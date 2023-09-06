@@ -21,9 +21,9 @@
         "FileName":  "BotMainSTFC-GroupUp.json",
         "ExeToRun":  "powershell.exe",
         "ProcessName":  "powershell",
-        "ArgumentList":  "deno run --allow-all .\\mod.ts",
+        "ArgumentList":  "C:\\Scripts\\deno.exe run --allow-all .\\mod.ts",
         "WorkingDirectory": "C:\\Scripts\\STFC-GroupUp",
-        "WriteLog": false,
-        "LogPath": ""
+        "WriteLog": true,
+        "LogPath": "C:\\Scripts\\BotLogs"
     }
 ]

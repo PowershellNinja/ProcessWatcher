@@ -38,7 +38,7 @@ function  Start-ProcessToRun {
     
     if ($null -eq $processFile) {
         # Start process and save JSON
-        $processObject = Start-Process $ptsrExeToRun -ArgumentList $ptsrArgumentList -PassThru -WorkingDirectory $workingDirectory
+        $processObject = Start-Process $ptsrExeToRun -ArgumentList $ptsrArgumentList -PassThru -WorkingDirectory $workingDirectory -LoadUserProfile
         $outPath = "$processWatcherPath\$ptsrFileName"
         $outDataFile = [PSCustomObject]@{
             ProcessName = $ptsrProcessName
@@ -62,7 +62,7 @@ function  Start-ProcessToRun {
                 $processObject = Get-Process -Id $importedPID -ErrorAction SilentlyContinue | Where-Object { $_.ProcessName -eq $ptsrProcessName }
     
                 if ($null -eq $processObject) {
-                    $processObject = Start-Process $ptsrExeToRun -ArgumentList $ptsrArgumentList -PassThru -WorkingDirectory $workingDirectory
+                    $processObject = Start-Process $ptsrExeToRun -ArgumentList $ptsrArgumentList -PassThru -WorkingDirectory $workingDirectory -LoadUserProfile
                     $outPath = "$processWatcherPath\$ptsrFileName"
     
                     $outDataFile = [PSCustomObject]@{
@@ -127,7 +127,7 @@ foreach ($ptsr in $processesThatShouldRun) {
         $workingDirectory = $ptsr.WorkingDirectory
 
         # Start process and save JSON
-        $processObject = Start-Process $ptsrExeToRun -ArgumentList $ptsrArgumentList -PassThru -WorkingDirectory $workingDirectory
+        $processObject = Start-Process $ptsrExeToRun -ArgumentList $ptsrArgumentList -PassThru -WorkingDirectory $workingDirectory -LoadUserProfile
         $outPath = "$processWatcherPath\$ptsrFileName"
         $outDataFile = [PSCustomObject]@{
             ProcessName = $ptsrProcessName
